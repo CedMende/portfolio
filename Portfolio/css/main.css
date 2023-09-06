@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+:root {
+  --dark-color: #2b2b2b;
+  --light-color: white;
+  --primary-color: #5abdb2;
+  --secondary-dark-color: #222;
+  --secondary-light-color: #f5f5f5;
+}
+
+.text-color {
+  color: var(--light-color);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+html[theme=dark-mode] img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html {
+  transition: color 300ms, background-color 300ms;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--dark-color);
+}
+
+.card-body:has(i, h5) {
+  color: var(--secondary-dark-color);
+}
+
+.card-transition:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
+}
+
+.color-link-active {
+  color: var(--primary-color);
+}
+
+.color-link {
+  color: var(--light-color);
+}
+.color-link:hover {
+  color: var(--primary-color);
+}
+
+.button-link {
+  color: var(--light-color) !important;
+  border: 1px solid var(--light-color);
+  border-radius: 25px;
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.button-link:hover {
+  color: var(--light-color) !important;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  padding-inline: 2.9rem !important;
+  letter-spacing: 2px;
+  transition: all ease-in-out 0.2s;
+}
+
+.sidebar-left {
+  position: fixed;
+  height: 100%;
+  width: 4em;
+  border-right: 1px dotted var(--light-color);
+  display: grid;
+  align-content: space-between;
+  background-color: var(--dark-color);
+  z-index: 999;
+}
+
+.sidebar-right {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  border-left: 1px dotted var(--light-color);
+  width: 4em;
+  display: grid;
+  align-content: space-between;
+  background-color: var(--dark-color);
+  z-index: 999;
+}
+
+.wrapper .container {
+  height: 100vh;
+}
+.wrapper .index-container .btn-good {
+  text-decoration: none;
+  border: 1px solid var(--light-color);
+  border-radius: 20px;
+  padding: 10px;
+}
+.wrapper .about-section {
+  background: var(--dark-color);
+}
+.wrapper .about-section .about {
+  overflow: hidden;
+  padding-inline: 3em;
+}
+.wrapper .services-section {
+  background: var(--secondary-dark-color) !important;
+}
+.wrapper .technology-section .card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .contact-section .container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.wrapper .contact-section .submit-btn {
+  text-decoration: none;
+  color: var(--light-text-color);
+}
+
+@media screen and (max-width: 766px) {
+  .about-section {
+    height: 120vh !important;
+  }
+  .services-section {
+    height: 130vh !important;
+  }
+  .services-section .card-md-size {
+    width: 25rem !important;
+  }
+}/*# sourceMappingURL=main.css.map */
